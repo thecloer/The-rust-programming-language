@@ -4,7 +4,7 @@
 
 ## 목차
 
-- [Ch01. 시작해봅시다.](ch01_intro/README.md)
+- [Ch01. 시작해봅시다.](Ch01_Getting_Started/README.md)
 - Ch02. 추리게임
 - Ch03. 일반적인 프로그래밍 개념
 - Ch04. 소유권 이해하기
