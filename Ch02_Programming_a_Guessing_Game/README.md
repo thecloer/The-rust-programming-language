@@ -25,9 +25,9 @@ cargo new guessing_game
 
 ## 2.3. 추릿값 처리하기
 
-`prelude`: 프로그램 내에서 별도의 명시적 import 없이도 바로 사용할 수 있도록 기본적으로 제공되는 표준 라이브러리 기능들의 집합.  
-Rust 표준 라이브러리(std)에서 자주 사용되는 몇몇 타입과 트레이트들은 prelude에 포함되어 있다. 예를 들어, `Option`, `Result`, `Vec`, `String` 같은 타입이나, `Copy`, `Clone`, `Eq`, `Ord` 등의 트레이트는 별도의 use 선언 없이도 바로 사용할 수 있습니다.  
-일반적으로 Rust 코드의 최상단 부분에 `use` 키워드를 통해 필요한 네임스페이스를 불러와야한다. 하지만 prelude에 포함된 항목은 `use std::prelude::v1::*`; 와 같은 구문이 사실상 암시적으로 추가된 것으로 간주된다.
+- `prelude`: 프로그램 내에서 별도의 명시적 import 없이도 바로 사용할 수 있도록 기본적으로 제공되는 표준 라이브러리 기능들의 집합.
+- Rust 표준 라이브러리(std)에서 자주 사용되는 몇몇 타입과 트레이트들은 prelude에 포함되어 있다. 예를 들어, `Option`, `Result`, `Vec`, `String` 같은 타입이나, `Copy`, `Clone`, `Eq`, `Ord` 등의 트레이트는 별도의 use 선언 없이도 바로 사용할 수 있다.
+- 일반적으로 Rust 코드의 최상단 부분에 `use` 키워드를 통해 필요한 네임스페이스를 불러와야한다. 하지만 prelude에 포함된 항목은 `use std::prelude::v1::*`; 와 같은 구문이 사실상 암시적으로 추가된 것으로 간주된다.
 
 ```rs
 let mut name = String::new();
@@ -44,13 +44,14 @@ io::stdin()
     .expect("Fail to read line.");
 ```
 
-`&`는 메모리 복사를 하지 않고 참조자(reference)를 넘겨주는 것을 의미한다. cpp의 reference와 같다. 참조자 역시 기본적으로 불변이다. 가변 참조자를 넘기기 위해서는 `&mut`를 사용해야한다.
+- `&`는 메모리 복사를 하지 않고 참조자(reference)를 넘겨주는 것을 의미한다. (cpp의 reference)
+- 참조자 역시 기본적으로 불변이다. 가변 참조자를 넘기기 위해서는 `&mut`를 사용해야한다.
 
 ## 2.4. `Result`를 이용한 에러 핸들링
 
-`Result`는 여러개의 가능한 상태중 하나가 될 수 있는 `enum`이다. 이러한 가능한 상탯값을 `variant`라 한다.  
-`Result`의 배리언트는 `Ok`와 `Err`가 있다.  
-`Result` 인스턴스에도 메서드가 있으며 `Result` 인스턴스의 값이 `Err`일 경우 프로그램을 멈추가 `expect`가 실행됩니다. `Ok`라면 결괏값을 반환합니다.
+- `Result`는 여러개의 가능한 상태중 하나가 될 수 있는 `enum`이다. 이러한 가능한 상탯값을 `variant`라 한다.
+- `Result`의 배리언트는 `Ok`와 `Err`가 있다.
+- `Result` 인스턴스에도 메서드가 있으며 `Result` 인스턴스의 값이 `Err`일 경우 프로그램을 멈추가 `expect`가 실행됩니다. `Ok`라면 결괏값을 반환합니다.
 
 ## 2.5. `println!`
 
@@ -64,10 +65,10 @@ println!("{{var}} {var} {}, {}", var, var + 1);
 
 ## 2.6. 비밀번호 생성하기(크레이트)
 
-`크레이트(crate)`는 러스트 코드 파일 모음이다.  
-우리가 작성하는 프로그램은 실행 가능한 `바이너리 크레이트(binary crate)`다.  
-rand 크레이트는 자체적으로 실행될 수 없고 다른 프로그램을 위해 작성된 `라이브러리 크레이트(library crate)`다.
-카고를 이용해 프로젝트의 크레이트를 관리 할 수 있다.
+- `크레이트(crate)`는 러스트 코드 파일 모음이다.
+- 우리가 작성하는 프로그램은 실행 가능한 `바이너리 크레이트(binary crate)`다.
+- `rand` 크레이트는 자체적으로 실행될 수 없고 다른 프로그램을 위해 작성된 `라이브러리 크레이트(library crate)`다.
+- 카고를 이용해 프로젝트의 크레이트를 관리 할 수 있다.
 
 `Cargo.toml`파일에 디펜던시를 추가.
 
@@ -76,7 +77,7 @@ rand 크레이트는 자체적으로 실행될 수 없고 다른 프로그램을
 rand = "0.8.5"
 ```
 
-[SemVer(Semantic Versioning)](https://semver.org/) "0.8.5" = "^0.8.5" = 0.8.5 이상 0.9.0 미만
+[SemVer(Semantic Versioning)](https://semver.org/) "0.8.5" = "^0.8.5" = (0.8.5 이상 && 0.9.0 미만)
 
 ```bash
 cargo add rand
@@ -94,19 +95,20 @@ match guess.cmp(&secret_number) {
     Ordering::Less => println!("Too small!"),
     Ordering::Greater => println!("Too big!"),
     Ordering::Equal => println!("You win!"),
+}
 ```
 
-`Ordering`은 `Less`, `Greater`, `Equal` 배리언트를 갖는 열거형이다.  
-`cmp()`는 비교하고 싶은 값의 참조자를 받아 `Ordering` 인스턴스를 반환한다.  
-`match` 표현식으로 `cmp`의 결과에 따라 `갈래(arm)`로 분기된다.  
-`match`의 값과 `패턴(pattern)`이 일치하는지 순서대로 확인하고 일치하는 패턴을 갖는 `갈래`가 실행된다.
+- `Ordering`은 `Less`, `Greater`, `Equal` 배리언트를 갖는 열거형이다.
+- `cmp()`는 비교하고 싶은 값의 참조자를 받아 `Ordering` 인스턴스를 반환한다.
+- `match` 표현식으로 `cmp`의 결과에 따라 `갈래(arm)`로 분기된다.
+- `match`의 값과 `패턴(pattern)`이 일치하는지 순서대로 확인하고 일치하는 패턴을 갖는 `갈래`가 실행된다.
 
-러스트에서는 `섀도잉(shadowing)`으로 변수 오버라이딩을 허용한다. 주로 타입 변환시에 자주 사용된다.
+* 러스트에서는 `섀도잉(shadowing)`으로 변수 오버라이딩을 허용한다. 주로 타입 변환시에 자주 사용된다.
 
 ## 2.8. `loop`를 이용한 반복문
 
-`loop`는 무한 반복문이다.
-`break`를 이용해 탈출 할 수 있다.
+- `loop`는 조건 없는 무한 반복문이다.
+- `break`와 `continue`를 사용할 수 있다.
 
 ```rs
 loop {

@@ -4,9 +4,9 @@
 
 ## 목차
 
-- [Ch01. 시작해봅시다.](Ch01_Getting_Started/README.md)
-- [Ch02. 추리게임](Ch02_Programming_a_Guessing_Game/README.md)
-- Ch03. 일반적인 프로그래밍 개념
+- [Ch01. 시작해봅시다.](./Ch01_Getting_Started/README.md)
+- [Ch02. 추리게임](./Ch02_Programming_a_Guessing_Game/README.md)
+- [Ch03. 일반적인 프로그래밍 개념](./Ch03_Common_Programming_Concepts/README.md)
 - Ch04. 소유권 이해하기
 - Ch05. 구조체로 연관된 데이터 구조화하기
 - Ch06. 열거형과 패턴 매칭
