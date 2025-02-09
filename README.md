@@ -4,11 +4,11 @@
 
 ## 목차
 
-- [Ch01. 시작해봅시다.](./Ch01_Getting_Started/README.md)
-- [Ch02. 추리게임](./Ch02_Programming_a_Guessing_Game/README.md)
-- [Ch03. 일반적인 프로그래밍 개념](./Ch03_Common_Programming_Concepts/README.md)
-- [Ch04. 소유권 이해하기](./Ch04_Understanding_Ownership/README.md)
-- [Ch05. 구조체로 연관된 데이터 구조화하기](./Ch05_Using_Structs_to_Structure_Related_Data/README.md)
+- [Ch01. 시작해봅시다.](./Ch01_Getting_Started)
+- [Ch02. 추리게임](./Ch02_Programming_a_Guessing_Game)
+- [Ch03. 일반적인 프로그래밍 개념](./Ch03_Common_Programming_Concepts)
+- [Ch04. 소유권 이해하기](./Ch04_Understanding_Ownership)
+- [Ch05. 구조체로 연관된 데이터 구조화하기](./Ch05_Using_Structs_to_Structure_Related_Data)
 - Ch06. 열거형과 패턴 매칭
 - Ch07. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기
 - Ch08. 일반적인 컬렉션
