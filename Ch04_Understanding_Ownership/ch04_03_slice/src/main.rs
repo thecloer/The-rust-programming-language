@@ -1,13 +1,21 @@
 fn main() {
     let literal = "Hello, world!";
+
+    // literal slice = literal
     let slice: &str = &literal[7..12];
     assert_eq!(slice, "world");
+
+    // literal full slice = source literal
     let slice: &str = &literal[..];
     assert_eq!(slice, literal);
+
+    // literal string reference type = literal string
     let slice: &str = literal;
     assert_eq!(slice, literal);
     
     let string = String::from(literal);
+
+    // slice of String is &str type
     let slice: &str = &string[7..12];
     assert_eq!(slice, "world");
     let slice: &str = &string[..];

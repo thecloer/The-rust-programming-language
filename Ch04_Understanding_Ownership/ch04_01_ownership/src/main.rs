@@ -4,7 +4,6 @@ fn main() {
     let s2 = s1;
     // println!("{s1}, world!"); // error
 
-
     // clone
     let s1 = String::from("hello");
 

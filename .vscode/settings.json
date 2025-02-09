@@ -1,0 +1,15 @@
+{
+  "rust-analyzer.linkedProjects": [
+    "Ch01_Getting_started/hello_cargo/Cargo.toml",
+    "Ch02_Programming_a_Guessing_Game/guessing_game/Cargo.toml",
+    "Ch03_Common_Programming_Concepts/ch03_01_variables/Cargo.toml",
+    "Ch03_Common_Programming_Concepts/ch03_03_functions/Cargo.toml",
+    "Ch03_Common_Programming_Concepts/ch03_04_flow_control/Cargo.toml",
+    "Ch03_Common_Programming_Concepts/ch03_exercises_nth_fibonacci_number/Cargo.toml",
+    "Ch04_Understanding_Ownership/ch04_01_ownership/Cargo.toml",
+    "Ch04_Understanding_Ownership/ch04_02_reference_and_borrow/Cargo.toml",
+    "Ch04_Understanding_Ownership/ch04_03_slice/Cargo.toml",
+    "Ch05_Using_Structs_to_Structure_Related_Data/ch05_01_struct_example/Cargo.toml",
+    "Ch06_Enums_and_Pattern_Matching/ch06_01_enum/Cargo.toml"
+  ]
+}
