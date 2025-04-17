@@ -9,7 +9,7 @@
 - [Ch03. 일반적인 프로그래밍 개념](./Ch03_Common_Programming_Concepts)
 - [Ch04. 소유권 이해하기](./Ch04_Understanding_Ownership)
 - [Ch05. 구조체로 연관된 데이터 구조화하기](./Ch05_Using_Structs_to_Structure_Related_Data)
-- Ch06. 열거형과 패턴 매칭
+- [Ch06. 열거형과 패턴 매칭](./Ch06_Enums_and_Pattern_Matching)
 - Ch07. 커져가는 프로젝트를 패키지, 크레이트, 모듈로 관리하기
 - Ch08. 일반적인 컬렉션
 - Ch09. 에러 처리

@@ -36,7 +36,7 @@ s.push_str(", world!"); // String 타입 값 s에 문자 리터럴 추가
 - `String` 타입은 힙에 메모리를 할당하는 방식을 사용해 텍스트의 내용 및 크기를 변경할 수 있다.
   - 실행 중 메모리 할당자로부터 메모리를 요청해야한다.
     - `String::from`, `String::new`, ...
-  - String 사용을 마쳤을 때 메모리를 해제할(즉, 할ㅈ당자에게 베모리를 반납할) 방법이 필요하다.
+  - String 사용을 마쳤을 때 메모리를 해제할(즉, 할당자에게 베모리를 반납할) 방법이 필요하다.
     - GC, free, 스코프를벗어나는 순간 메모리 자동 해제([drop](https://doc.rust-lang.org/std/ops/trait.Drop.html)), ...
 
 ```rs
@@ -196,7 +196,7 @@ fn main() {
     let s2 = String::from("hello");
 
     let s3 = takes_and_gives_back(s2); // move
-} // s1 and s3 drop, s2 is moved
+} // s1 and s3 dropped, s2 is moved
 
 fn gives_ownership() -> String {
     String::from("yours") // move
